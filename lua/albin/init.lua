@@ -1,3 +1,3 @@
-require("albin.remap")
+lazy("albin.remap")
 require("albin.set")
 

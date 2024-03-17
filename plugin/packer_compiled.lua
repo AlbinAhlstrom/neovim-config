@@ -170,6 +170,13 @@ _G.packer_plugins = {
     path = "/Users/salt-dev/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-be-good"] = {
+    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/salt-dev/.local/share/nvim/site/pack/packer/opt/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/salt-dev/.local/share/nvim/site/pack/packer/start/vim-fugitive",
