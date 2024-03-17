@@ -31,7 +31,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Rename all occurances of word
-vim.keymap.set("n", "<leader>s",
+vim.keymap.set("n", "<leader>r",
     [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Make excecutable
