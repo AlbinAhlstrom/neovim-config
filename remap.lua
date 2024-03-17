@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+vim.keymap.set("n", "<leader>-", vim.cmd.Ex)
 
 -- Move text block in Visual Mode - J, K
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -24,20 +25,33 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
--- This is going to get me cancelled
+-- Set C-c to Esc
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Disable Ex-mode with Q
 vim.keymap.set("n", "Q", "<nop>")
 
--- Rename all occurances of word
-vim.keymap.set("n", "<leader>r",
+-- Rename all occurances of word (substitute)
+vim.keymap.set("n", "<leader>s",
     [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- Make excecutable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- Go to packer file for package management
+-- Go to lazy file for package management
 vim.keymap.set("n", "<leader>vpp",
-    "<cmd>e ~/.config/nvim/lua/albin/packer.lua<CR>");
+    "<cmd>e ~/.config/nvim/lua/albin/lazy.lua<CR>")
 
+-- Add empty line
+vim.keymap.set("n", "<leader>o", "o<Esc>")
+vim.keymap.set("n", "<leader>O", "O<Esc>")
+
+------------------------------ Fugitive ---------------------------------------
+-- Add git commands
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+vim.keymap.set('n', '<leader>gc', ':Git commit<CR>')
+vim.keymap.set('n', '<leader>ga', ':Git add .<CR>')
+
+vim.keymap.set('n', '<leader>q', ':q<CR>')
+vim.keymap.set('n', '<leader>j', '<C-w>j')
+vim.keymap.set('n', '<leader>k', '<C-w>k')
